@@ -1,18 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        Libro libro1 = new Libro("Utopía", "Ana Isabel Coonejo", 2020, true);
-        Libro libro2 = new Libro("Culpa mía", "Mercedez Ron", 2017, true);
+        Libro libro1 = new Libro("Utopía", "Ana Isabel Conejo", 2020, true);
+        Libro libro2 = new Libro("Culpa mía", "Mercedes Ron", 2017, true);
 
         System.out.println("--- Información de los libros ---");
         libro1.mostrarInfo();
+        System.out.println();
         libro2.mostrarInfo();
 
         libro2.setAutor("Autor Desconocido");
-        libro2.setDisponible(false);
 
         System.out.println("\n--- Después de actualizar autor ---");
         libro1.mostrarInfo();
+        System.out.println();
         libro2.mostrarInfo();
 
         System.out.println("\n--- Préstamos y devoluciones ---");
