@@ -15,22 +15,24 @@ public class Libro {
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Año: " + anio);
-        System.out.println("Disponible: " + disponible);
+        System.out.println("Disponible: " + (disponible ? "Sí" : "No"));
     }
 
     public void prestarLibro() {
-        if (disponible = true) {
-            System.out.println("El libro" + titulo +  " ha sido prestado.");
+        if (disponible) {
+            disponible = false;
+            System.out.println("El libro " + titulo + " ha sido prestado.");
         } else {
-            System.out.println("El libro" + titulo + " no está disponible.");
+            System.out.println("El libro " + titulo + " no está disponible.");
         }
     }
 
     public void devolverLibro() {
-        if (disponible = true) {
-            System.out.println("El libro \"" + titulo + "\" ha sido devuelto.");
+        if (!disponible) {
+            disponible = true;
+            System.out.println("El libro " + titulo + " ha sido devuelto.");
         } else {
-            System.out.println("El libro \"" + titulo + "\" no estaba prestado.");
+            System.out.println("El libro " + titulo + " ya estaba disponible.");
         }
     }
 
@@ -58,7 +60,7 @@ public class Libro {
         this.anio = anio;
     }
 
-    public boolean getDisponible() {
+    public boolean isDisponible() {
         return disponible;
     }
 
